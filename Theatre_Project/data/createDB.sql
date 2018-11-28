@@ -53,11 +53,16 @@ create table LesDossiers_base (
 
 -- TODO 1b : ajouter la définition des vues LesDossiers et LesRepresentations
 
-create view LesDossiers (nDos, montant) as
+create view LesDossiers (noDos, montant) as
     with X as (select noDos, prixZone from lesZones natural join LesPlaces natural join LesTickets)
     select noDos, sum(prixZone) as montant from X group by noDos;
 
 create view LesRepresentations (noSpec, dateRep, nbPlaces) as
-    select noSpec, dateRep, nbPlaces from LesRepresentations_base where nbPlaces in (select count(noPlace) as nbPlaces from LesPlaces
-             minus
-               select count(noPlace) as nbPlaces from LesTickets)
+    with Y as(select noSpec,dateRep from LesRepresentations_base
+       EXCEPT select noSpec,dateRep from LesRepresentations_base natural join LesTickets),
+    X as (
+       select count(noPlace) as placeTotal from LesPlaces
+       )
+    select noSpec,dateRep,placeTotal-count(noPlace) as placeDispo from LesRepresentations_base natural join LesTickets natural join X
+              group by noSpec,dateRep
+    union select noSpec,dateRep,15 from Y

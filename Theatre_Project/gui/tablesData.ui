@@ -149,7 +149,7 @@
           <enum>Qt::LeftToRight</enum>
          </property>
          <property name="columnCount">
-          <number>2</number>
+          <number>3</number>
          </property>
          <attribute name="horizontalHeaderCascadingSectionResizes">
           <bool>true</bool>
@@ -171,12 +171,17 @@
          </attribute>
          <column>
           <property name="text">
+           <string>dateRep</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
            <string>noSpec</string>
           </property>
          </column>
          <column>
           <property name="text">
-           <string>dateRep</string>
+           <string>nbPlaces</string>
           </property>
          </column>
         </widget>
@@ -443,6 +448,11 @@
          <column>
           <property name="text">
            <string>noDos</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>montant</string>
           </property>
          </column>
         </widget>

@@ -5,7 +5,7 @@
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:D:\学习\Theatre_Project\data\theatre.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:H:\Projet2018BD\Theatre_Project\data\theatre.db</jdbc-url>
       <driver-properties>
         <property name="enable_load_extension" value="true" />
       </driver-properties>
