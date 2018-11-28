@@ -24,7 +24,7 @@ def refreshGenericData(qtablewidget: PyQt5.QtWidgets.QTableWidgetItem, result):
 def refreshGenericCombo(combo, result):
     combo.clear()
     for row_num, row_data in enumerate(result):
-        combo.addItem(row_data[0])
+        combo.addItem(str(row_data[0]))
 
 # Fonction permettant de mettre à jour un label, adaptée à tous les OS
 def refreshLabel(qlabel: PyQt5.QtWidgets.QLabel, text):

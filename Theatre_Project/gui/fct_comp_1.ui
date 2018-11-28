@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>659</width>
-    <height>383</height>
+    <width>1126</width>
+    <height>323</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -48,16 +48,6 @@
      </column>
      <column>
       <property name="text">
-       <string>dateEmis</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>noDos</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
        <string>dateRep</string>
       </property>
      </column>
@@ -69,6 +59,16 @@
      <column>
       <property name="text">
        <string>noRang</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>dateEmission</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>noDossier</string>
       </property>
      </column>
     </widget>

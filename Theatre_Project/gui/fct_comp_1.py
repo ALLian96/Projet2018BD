@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_fct_comp_1(object):
     def setupUi(self, fct_comp_1):
         fct_comp_1.setObjectName("fct_comp_1")
-        fct_comp_1.resize(659, 383)
+        fct_comp_1.resize(1126, 323)
         self.verticalLayout = QtWidgets.QVBoxLayout(fct_comp_1)
         self.verticalLayout.setObjectName("verticalLayout")
         self.label_2 = QtWidgets.QLabel(fct_comp_1)
@@ -56,13 +56,13 @@ class Ui_fct_comp_1(object):
         item = self.table_fct_comp_1.horizontalHeaderItem(0)
         item.setText(_translate("fct_comp_1", "noSpec"))
         item = self.table_fct_comp_1.horizontalHeaderItem(1)
-        item.setText(_translate("fct_comp_1", "dateEmis"))
-        item = self.table_fct_comp_1.horizontalHeaderItem(2)
-        item.setText(_translate("fct_comp_1", "noDos"))
-        item = self.table_fct_comp_1.horizontalHeaderItem(3)
         item.setText(_translate("fct_comp_1", "dateRep"))
-        item = self.table_fct_comp_1.horizontalHeaderItem(4)
+        item = self.table_fct_comp_1.horizontalHeaderItem(2)
         item.setText(_translate("fct_comp_1", "noPlace"))
-        item = self.table_fct_comp_1.horizontalHeaderItem(5)
+        item = self.table_fct_comp_1.horizontalHeaderItem(3)
         item.setText(_translate("fct_comp_1", "noRang"))
+        item = self.table_fct_comp_1.horizontalHeaderItem(4)
+        item.setText(_translate("fct_comp_1", "dateEmission"))
+        item = self.table_fct_comp_1.horizontalHeaderItem(5)
+        item.setText(_translate("fct_comp_1", "noDossier"))
 
