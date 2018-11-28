@@ -21,7 +21,7 @@ class AppFctComp3(QDialog):
     def refreshResult(self):
         # TODO 3 : fonction à modifier pour remplacer la zone de saisie par une liste de valeurs issues de la BD une fois le fichier ui correspondant mis à jour
         display.refreshLabel(self.ui.label_fct_comp_3, "")
-        if not self.ui.lineEdit_fct_comp_3.text().strip():
+        if not self.ui.comboBox_fct_comp_3.currentText().strip():
             self.ui.table_fct_comp_3.setRowCount(0)
             display.refreshLabel(self.ui.label_fct_comp_3, "Veuillez indiquer un nom de catégorie")
         else:
@@ -29,7 +29,7 @@ class AppFctComp3(QDialog):
                 cursor = self.data.cursor()
                 result = cursor.execute(
                     "SELECT noPlace, noRang, noZone, prixZone FROM LesZones NATURAL JOIN LesPlaces WHERE catZone = ?",
-                    [self.ui.lineEdit_fct_comp_3.text().strip()])
+                    [self.ui.comboBox_fct_comp_3.currentText().strip()])
             except Exception as e:
                 self.ui.table_fct_comp_3.setRowCount(0)
                 display.refreshLabel(self.ui.label_fct_comp_3, "Impossible d'afficher les résultats : " + repr(e))
