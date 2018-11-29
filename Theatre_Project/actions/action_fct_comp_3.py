@@ -15,6 +15,7 @@ class AppFctComp3(QDialog):
         super(QDialog, self).__init__()
         self.ui.setupUi(self)
         self.data = data
+        self.refreshCatList()
 
     # Fonction de mise à jour de l'affichage
     @pyqtSlot()
@@ -37,3 +38,14 @@ class AppFctComp3(QDialog):
                 i = display.refreshGenericData(self.ui.table_fct_comp_3, result)
                 if i == 0:
                     display.refreshLabel(self.ui.label_fct_comp_3, "Aucun résultat")
+
+    @pyqtSlot()
+    def refreshCatList(self):
+
+            try:
+                cursor = self.data.cursor()
+                result = cursor.execute("SELECT catZone FROM LesZones")
+            except Exception as e:
+                self.ui.comboBox_fct_comp_3.clear()
+            else:
+                display.refreshGenericCombo(self.ui.comboBox_fct_comp_3, result)
