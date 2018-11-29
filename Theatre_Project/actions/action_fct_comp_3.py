@@ -15,8 +15,8 @@ class AppFctComp3(QDialog):
         super(QDialog, self).__init__()
         self.ui.setupUi(self)
         self.data = data
+        self.refreshResult()
         self.refreshCatList()
-
     # Fonction de mise à jour de l'affichage
     @pyqtSlot()
     def refreshResult(self):

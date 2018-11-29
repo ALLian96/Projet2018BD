@@ -57,7 +57,7 @@ create view LesDossiers (noDos, montant) as
     with X as (select noDos, prixZone from lesZones natural join LesPlaces natural join LesTickets)
     select noDos, sum(prixZone) as montant from X group by noDos;
 
-create view LesRepresentations (noSpec, dateRep, nbPlaces) as
+create view LesRepresentations (noSpec, dateRep, nbPlacesDispo) as
     with Y as(select noSpec,dateRep from LesRepresentations_base
        EXCEPT select noSpec,dateRep from LesRepresentations_base natural join LesTickets),
     X as (

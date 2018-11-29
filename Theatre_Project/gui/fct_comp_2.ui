@@ -40,7 +40,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox">
+      <widget class="QComboBox" name="comboBox_fct_comp2">
        <item>
         <property name="text">
          <string>orchestre</string>
@@ -91,6 +91,11 @@
      <column>
       <property name="text">
        <string>noZone</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>prixZone</string>
       </property>
      </column>
     </widget>

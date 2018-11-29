@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>584</width>
+    <width>400</width>
     <height>300</height>
    </rect>
   </property>
@@ -72,6 +72,11 @@
      <column>
       <property name="text">
        <string>noZone</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>prixZone</string>
       </property>
      </column>
     </widget>

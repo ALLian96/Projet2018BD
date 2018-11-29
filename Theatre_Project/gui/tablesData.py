@@ -271,7 +271,7 @@ class Ui_tablesData(object):
         self.verticalLayout.addLayout(self.horizontalLayout)
 
         self.retranslateUi(tablesData)
-        self.tabWidget.setCurrentIndex(4)
+        self.tabWidget.setCurrentIndex(1)
         self.pushButton.clicked.connect(tablesData.close)
         QtCore.QMetaObject.connectSlotsByName(tablesData)
 

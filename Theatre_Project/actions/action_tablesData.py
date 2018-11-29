@@ -42,7 +42,7 @@ class AppTablesData(QDialog):
         # TODO 1b : modifier les ui et les requêtes pour affichage des vues LesDossiers et LesRepresentations
         self.refreshTable(self.ui.label_spectacles, self.ui.tableSpectacles, "SELECT noSpec, nomSpec FROM LesSpectacles")
         self.refreshTable(self.ui.label_zones, self.ui.tableZones, "SELECT noZone, catZone, prixZone  FROM LesZones")
-        self.refreshTable(self.ui.label_representations, self.ui.tableRepresentations, "SELECT noSpec, dateRep, nbPlaces FROM LesRepresentations")
+        self.refreshTable(self.ui.label_representations, self.ui.tableRepresentations, "SELECT noSpec, dateRep,nbPlacesDispo FROM LesRepresentations")
         self.refreshTable(self.ui.label_places, self.ui.tablePlaces, "SELECT noPlace, noRang, noZone FROM LesPlaces")
         self.refreshTable(self.ui.label_dossiers, self.ui.tableDossiers, "SELECT noDos,montant FROM LesDossiers")
         self.refreshTable(self.ui.label_tickets, self.ui.tableTickets, "SELECT noSpec, dateRep, noPlace, noRang, dateEmTick, noDos FROM LesTickets")

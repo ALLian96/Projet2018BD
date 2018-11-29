@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_fct_comp_3(object):
     def setupUi(self, fct_comp_3):
         fct_comp_3.setObjectName("fct_comp_3")
-        fct_comp_3.resize(584, 300)
+        fct_comp_3.resize(400, 300)
         self.verticalLayout = QtWidgets.QVBoxLayout(fct_comp_3)
         self.verticalLayout.setObjectName("verticalLayout")
         self.label = QtWidgets.QLabel(fct_comp_3)
@@ -33,7 +33,7 @@ class Ui_fct_comp_3(object):
         self.verticalLayout.addLayout(self.horizontalLayout)
         self.table_fct_comp_3 = QtWidgets.QTableWidget(fct_comp_3)
         self.table_fct_comp_3.setObjectName("table_fct_comp_3")
-        self.table_fct_comp_3.setColumnCount(3)
+        self.table_fct_comp_3.setColumnCount(4)
         self.table_fct_comp_3.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
         self.table_fct_comp_3.setHorizontalHeaderItem(0, item)
@@ -41,6 +41,8 @@ class Ui_fct_comp_3(object):
         self.table_fct_comp_3.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
         self.table_fct_comp_3.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.table_fct_comp_3.setHorizontalHeaderItem(3, item)
         self.table_fct_comp_3.horizontalHeader().setMinimumSectionSize(50)
         self.table_fct_comp_3.horizontalHeader().setStretchLastSection(True)
         self.table_fct_comp_3.verticalHeader().setVisible(False)
@@ -67,4 +69,6 @@ class Ui_fct_comp_3(object):
         item.setText(_translate("fct_comp_3", "noRang"))
         item = self.table_fct_comp_3.horizontalHeaderItem(2)
         item.setText(_translate("fct_comp_3", "noZone"))
+        item = self.table_fct_comp_3.horizontalHeaderItem(3)
+        item.setText(_translate("fct_comp_3", "prixZone"))
 
