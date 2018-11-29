@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
+    <width>525</width>
     <height>300</height>
    </rect>
   </property>
@@ -40,13 +40,22 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit"/>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>&quot;balcon&quot;,&quot;orchestre&quot;,&quot;poulailler&quot;</string>
-       </property>
+      <widget class="QComboBox" name="comboBox">
+       <item>
+        <property name="text">
+         <string>orchestre</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>poulailler</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>balcon</string>
+        </property>
+       </item>
       </widget>
      </item>
      <item>
