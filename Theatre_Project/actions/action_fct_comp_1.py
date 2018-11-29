@@ -26,8 +26,7 @@ class AppFctComp1(QDialog):
             cursor = self.data.cursor()
             # DONE 1 : mettre à jour la requête et changer aussi le fichier ui correspondant
             result = cursor.execute("SELECT noSpec, dateRep, noPlace, noRang, dateEmTick, noDos FROM LesTickets")
+            display.refreshGenericData(self.ui.table_fct_comp_1, result)
         except Exception as e:
             self.ui.table_fct_comp_1.setRowCount(0)
             display.refreshLabel(self.ui.label_fct_comp_1, "Impossible d'afficher les résultats : " + repr(e))
-        else:
-            display.refreshGenericData(self.ui.table_fct_comp_1, result)

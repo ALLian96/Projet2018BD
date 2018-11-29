@@ -1,4 +1,3 @@
-
 import sqlite3
 from utils import display
 from gui.fct_comp_2 import Ui_fct_comp_2

@@ -27,13 +27,6 @@
       <widget class="QLineEdit" name="lineEdit"/>
      </item>
      <item>
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>&quot;orchestre&quot;,&quot;balcon&quot;,&quot;poulailler&quot;</string>
-       </property>
-      </widget>
-     </item>
-     <item>
       <widget class="QPushButton" name="pushButton">
        <property name="text">
         <string>Valider</string>

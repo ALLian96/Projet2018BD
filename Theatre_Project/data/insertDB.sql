@@ -3,6 +3,7 @@ insert into LesSpectacles(noSpec, nomSpec) values (2, 'Je parle toute seule');
 
 insert into LesZones(noZone, catZone, prixZone) values (1, 'orchestre', 5);
 insert into LesZones(noZone, catZone, prixZone) values (2, 'balcon', 3.5);
+insert into LesZones(noZone, catZone, prixZone) values (3, 'poulailler', 10);
 
 insert into LesPlaces(noPlace, noRang, noZone) values (1, 1, 1);
 insert into LesPlaces(noPlace, noRang, noZone) values (2, 1, 1);
@@ -21,6 +22,7 @@ insert into LesPlaces(noPlace, noRang, noZone) values (2, 3, 2);
 insert into LesPlaces(noPlace, noRang, noZone) values (3, 3, 2);
 insert into LesPlaces(noPlace, noRang, noZone) values (4, 3, 2);
 insert into LesPlaces(noPlace, noRang, noZone) values (5, 3, 2);
+insert into LesPlaces(noPlace, noRang, noZone) values (6, 3, 3);
 
 insert into LesDossiers_base(noDos) values (1);
 insert into LesDossiers_base(noDos) values (2);
@@ -44,3 +46,5 @@ insert into LesTickets(noSpec, dateRep, noPlace, noRang, dateEmTick, noDos) valu
 
 insert into LesTickets(noSpec, dateRep, noPlace, noRang, dateEmTick, noDos) values (2, '25/01/2018 23:00', 1, 3, '20/01/2018 14:22:00',3);
 insert into LesTickets(noSpec, dateRep, noPlace, noRang, dateEmTick, noDos) values (2, '25/01/2018 23:00', 2, 3, '20/01/2018 14:22:00',3);
+
+insert into LesTickets(noSpec, dateRep, noPlace, noRang, dateEmTick, noDos) values (2, '25/01/2018 23:00', 6, 3, '25/01/2018 22:00:00',4);

@@ -22,9 +22,6 @@ class Ui_fct_fournie_2(object):
         self.lineEdit = QtWidgets.QLineEdit(fct_fournie_2)
         self.lineEdit.setObjectName("lineEdit")
         self.horizontalLayout.addWidget(self.lineEdit)
-        self.label_2 = QtWidgets.QLabel(fct_fournie_2)
-        self.label_2.setObjectName("label_2")
-        self.horizontalLayout.addWidget(self.label_2)
         self.pushButton = QtWidgets.QPushButton(fct_fournie_2)
         self.pushButton.setObjectName("pushButton")
         self.horizontalLayout.addWidget(self.pushButton)
@@ -60,7 +57,6 @@ class Ui_fct_fournie_2(object):
         _translate = QtCore.QCoreApplication.translate
         fct_fournie_2.setWindowTitle(_translate("fct_fournie_2", "Liste et prix des places d\'une zone"))
         self.label.setText(_translate("fct_fournie_2", "Saisissez une catégorie :"))
-        self.label_2.setText(_translate("fct_fournie_2", "\"orchestre\",\"balcon\",\"poulailler\""))
         self.pushButton.setText(_translate("fct_fournie_2", "Valider"))
         item = self.table_fct_fournie_2.horizontalHeaderItem(0)
         item.setText(_translate("fct_fournie_2", "noPlace"))
