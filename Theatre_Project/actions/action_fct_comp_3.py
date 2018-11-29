@@ -49,3 +49,4 @@ class AppFctComp3(QDialog):
                 self.ui.comboBox_fct_comp_3.clear()
             else:
                 display.refreshGenericCombo(self.ui.comboBox_fct_comp_3, result)
+

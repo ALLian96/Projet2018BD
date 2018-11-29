@@ -27,7 +27,9 @@ class AppFctComp2(QDialog):
         else:
             try:
                 cursor = self.data.cursor()
-                result = cursor.execute( "SELECT noPlace, noRang, noZone, prixZone FROM LesZones NATURAL JOIN LesPlaces WHERE catZone = ?",[self.ui.lineEdit.text().strip()])
+                result = cursor.execute(
+                    "SELECT noPlace, noRang, noZone, prixZone FROM LesZones NATURAL JOIN LesPlaces WHERE catZone = ?",
+                    [self.ui.lineEdit.text().strip()])
             except Exception as e:
                 self.ui.table_fct_comp_2.setRowCount(0)
                 display.refreshLabel(self.ui.label_fct_comp_2, "Impossible d'afficher les résultats : " + repr(e))
