@@ -58,11 +58,9 @@ create view LesDossiers (noDos, montant) as
     select noDos, sum(prixZone) as montant from X group by noDos;
 
 create view LesRepresentations (noSpec, dateRep, nbPlacesDispo) as
-    with Y as(select noSpec,dateRep from LesRepresentations_base
-       EXCEPT select noSpec,dateRep from LesRepresentations_base natural join LesTickets),
-    X as (
+    with X as (
        select count(noPlace) as placeTotal from LesPlaces
        )
-    select noSpec,dateRep,placeTotal-count(noPlace) as placeDispo from LesRepresentations_base natural join LesTickets natural join X
-              group by noSpec,dateRep
-    union select noSpec,dateRep,15 from Y
+    select LR.noSpec,LR.dateRep,placeTotal-count(noPlace) as placeDispo from LesRepresentations_base LR natural join X
+              left outer join LesTickets LT on LR.noSpec = LT.noSpec and LR.dateRep = LT.dateRep
+              group by LR.noSpec,LR.dateRep

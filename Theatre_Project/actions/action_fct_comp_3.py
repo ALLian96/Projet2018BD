@@ -14,7 +14,8 @@ class AppFctComp3(QDialog):
         super(QDialog, self).__init__()
         self.ui.setupUi(self)
         self.data = data
-        self.refreshResult()
+
+        self.refreshCatList()
 
     # Fonction de mise à jour de l'affichage
     def refreshResult(self):
@@ -23,7 +24,8 @@ class AppFctComp3(QDialog):
         if not self.ui.comboBox_fct_comp_3.currentText().strip():
             self.ui.table_fct_comp_3.setRowCount(0)
             display.refreshLabel(self.ui.label_fct_comp_3, "Veuillez indiquer un nom de catégorie")
-            self.refreshCatList()
+
+
         else:
             try:
                 cursor = self.data.cursor()

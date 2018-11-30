@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>492</width>
-    <height>342</height>
+    <width>626</width>
+    <height>450</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -125,8 +125,8 @@
    <slot>refreshResult()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>437</x>
-     <y>21</y>
+     <x>503</x>
+     <y>63</y>
     </hint>
     <hint type="destinationlabel">
      <x>91</x>
@@ -134,8 +134,25 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>comboBox_4_dos</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>fct_comp_4</receiver>
+   <slot>refreshCatList()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>202</x>
+     <y>51</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-2</x>
+     <y>44</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>refreshResult()</slot>
+  <slot>refreshCatList()</slot>
  </slots>
 </ui>

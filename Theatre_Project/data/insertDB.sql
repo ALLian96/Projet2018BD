@@ -47,4 +47,4 @@ insert into LesTickets(noSpec, dateRep, noPlace, noRang, dateEmTick, noDos) valu
 insert into LesTickets(noSpec, dateRep, noPlace, noRang, dateEmTick, noDos) values (2, '25/01/2018 23:00', 1, 3, '20/01/2018 14:22:00',3);
 insert into LesTickets(noSpec, dateRep, noPlace, noRang, dateEmTick, noDos) values (2, '25/01/2018 23:00', 2, 3, '20/01/2018 14:22:00',3);
 
-insert into LesTickets(noSpec, dateRep, noPlace, noRang, dateEmTick, noDos) values (2, '25/01/2018 23:00', 6, 3, '25/01/2018 22:00:00',4);
+insert into LesTickets(noSpec, dateRep, noPlace, noRang, dateEmTick, noDos) values (2, '25/01/2018 23:00', 6, 3, '24/01/2018 22:00:00',4);

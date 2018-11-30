@@ -16,10 +16,8 @@ class AppFctComp4(QDialog):
         self.ui.setupUi(self)
         self.data = data
         self.refreshNoDos()
-        self.refreshCatList()
 
     # Fonction de mise à jour de l'affichage
-    @pyqtSlot()
     def refreshResult(self):
         # TODO 4 : fonction à modifier pour que le numéro de dossier ne puisse être choisi que parmi ceux présents dans la base et que la catégorie ne propose que des valeurs possibles pour le dossier choisi, une fois le fichier ui correspondant mis à jour
         display.refreshLabel(self.ui.label_fct_comp_4, "")
@@ -45,7 +43,7 @@ class AppFctComp4(QDialog):
         display.refreshLabel(self.ui.label_fct_comp_4, "")
         try:
             cursor = self.data.cursor()
-            result = cursor.execute("SELECT DISTINCT  catZone FROM LesDossiers NATURAL JOIN LesPlaces NATURAL JOIN LesZones WHERE noDos = ? ",
+            result = cursor.execute("SELECT DISTINCT catZone FROM LesDossiers NATURAL JOIN LesTickets NATURAL JOIN LesPlaces NATURAL JOIN LesZones WHERE noDos = ? ",
                                     [self.ui.comboBox_4_dos.currentText().strip()])
         except Exception as e:
             self.ui.comboBox_4_categorie.clear()
@@ -53,12 +51,12 @@ class AppFctComp4(QDialog):
             i = display.refreshGenericCombo(self.ui.comboBox_4_categorie, result)
 
     # Fonction de sélection numéro des dossiers
+
     def refreshNoDos(self):
 
         try:
             cursor = self.data.cursor()
             result = cursor.execute("SELECT noDos FROM LesDossiers")
-            display.refreshGenericData(self.ui.table_fct_fournie_1, result)
         except Exception as e:
             self.ui.comboBox_4_dos.clear()
         else:

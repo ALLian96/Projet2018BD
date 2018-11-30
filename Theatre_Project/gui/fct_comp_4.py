@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_fct_comp_4(object):
     def setupUi(self, fct_comp_4):
         fct_comp_4.setObjectName("fct_comp_4")
-        fct_comp_4.resize(478, 325)
+        fct_comp_4.resize(626, 450)
         self.verticalLayout = QtWidgets.QVBoxLayout(fct_comp_4)
         self.verticalLayout.setObjectName("verticalLayout")
         self.label_3 = QtWidgets.QLabel(fct_comp_4)
@@ -66,6 +66,7 @@ class Ui_fct_comp_4(object):
 
         self.retranslateUi(fct_comp_4)
         self.pushButton_fct_4.clicked.connect(fct_comp_4.refreshResult)
+        self.comboBox_4_dos.currentTextChanged['QString'].connect(fct_comp_4.refreshCatList)
         QtCore.QMetaObject.connectSlotsByName(fct_comp_4)
 
     def retranslateUi(self, fct_comp_4):
