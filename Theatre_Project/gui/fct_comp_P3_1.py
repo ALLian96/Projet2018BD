@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_fct_fournie_comp_P3_1(object):
     def setupUi(self, fct_fournie_comp_P3_1):
         fct_fournie_comp_P3_1.setObjectName("fct_fournie_comp_P3_1")
-        fct_fournie_comp_P3_1.resize(561, 601)
+        fct_fournie_comp_P3_1.resize(457, 602)
         self.verticalLayout = QtWidgets.QVBoxLayout(fct_fournie_comp_P3_1)
         self.verticalLayout.setObjectName("verticalLayout")
         self.table_fct_comp_P3_1 = QtWidgets.QTableWidget(fct_fournie_comp_P3_1)

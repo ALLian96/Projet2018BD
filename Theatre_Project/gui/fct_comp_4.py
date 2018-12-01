@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_fct_comp_4(object):
     def setupUi(self, fct_comp_4):
         fct_comp_4.setObjectName("fct_comp_4")
-        fct_comp_4.resize(626, 450)
+        fct_comp_4.resize(626, 505)
         self.verticalLayout = QtWidgets.QVBoxLayout(fct_comp_4)
         self.verticalLayout.setObjectName("verticalLayout")
         self.label_3 = QtWidgets.QLabel(fct_comp_4)
@@ -38,6 +38,7 @@ class Ui_fct_comp_4(object):
         self.horizontalLayout.addWidget(self.pushButton_fct_4)
         self.verticalLayout.addLayout(self.horizontalLayout)
         self.table_fct_comp_4 = QtWidgets.QTableWidget(fct_comp_4)
+        self.table_fct_comp_4.setFocusPolicy(QtCore.Qt.StrongFocus)
         self.table_fct_comp_4.setObjectName("table_fct_comp_4")
         self.table_fct_comp_4.setColumnCount(6)
         self.table_fct_comp_4.setRowCount(0)

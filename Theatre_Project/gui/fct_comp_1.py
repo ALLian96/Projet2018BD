@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_fct_comp_1(object):
     def setupUi(self, fct_comp_1):
         fct_comp_1.setObjectName("fct_comp_1")
-        fct_comp_1.resize(1126, 323)
+        fct_comp_1.resize(814, 214)
         self.verticalLayout = QtWidgets.QVBoxLayout(fct_comp_1)
         self.verticalLayout.setObjectName("verticalLayout")
         self.label_2 = QtWidgets.QLabel(fct_comp_1)
@@ -45,6 +45,9 @@ class Ui_fct_comp_1(object):
         self.label_fct_comp_1.setAlignment(QtCore.Qt.AlignCenter)
         self.label_fct_comp_1.setObjectName("label_fct_comp_1")
         self.verticalLayout.addWidget(self.label_fct_comp_1)
+        self.label_2.raise_()
+        self.label_fct_comp_1.raise_()
+        self.table_fct_comp_1.raise_()
 
         self.retranslateUi(fct_comp_1)
         QtCore.QMetaObject.connectSlotsByName(fct_comp_1)

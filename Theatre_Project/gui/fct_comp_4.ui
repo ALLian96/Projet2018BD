@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>626</width>
-    <height>450</height>
+    <height>505</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -60,6 +60,9 @@
    </item>
    <item>
     <widget class="QTableWidget" name="table_fct_comp_4">
+     <property name="focusPolicy">
+      <enum>Qt::StrongFocus</enum>
+     </property>
      <attribute name="horizontalHeaderDefaultSectionSize">
       <number>70</number>
      </attribute>
@@ -125,8 +128,8 @@
    <slot>refreshResult()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>503</x>
-     <y>63</y>
+     <x>618</x>
+     <y>48</y>
     </hint>
     <hint type="destinationlabel">
      <x>91</x>
@@ -141,8 +144,8 @@
    <slot>refreshCatList()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>202</x>
-     <y>51</y>
+     <x>248</x>
+     <y>49</y>
     </hint>
     <hint type="destinationlabel">
      <x>-2</x>

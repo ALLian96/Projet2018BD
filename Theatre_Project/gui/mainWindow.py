@@ -242,7 +242,7 @@ class Ui_MainWindow(object):
         self.verticalLayout.addItem(spacerItem29)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 671, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 671, 18))
         self.menubar.setObjectName("menubar")
         self.menuFiles = QtWidgets.QMenu(self.menubar)
         self.menuFiles.setObjectName("menuFiles")
@@ -267,6 +267,7 @@ class Ui_MainWindow(object):
         self.pushButton_7.clicked.connect(MainWindow.open_fct_comp_2)
         self.pushButton_8.clicked.connect(MainWindow.open_fct_comp_3)
         self.pushButton_9.clicked.connect(MainWindow.open_fct_comp_4)
+        self.pushButton_12.clicked.connect(MainWindow.open_fct_comp_7)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
