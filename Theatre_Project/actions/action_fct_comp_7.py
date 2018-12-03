@@ -23,7 +23,8 @@ class AppFctComp7(QDialog):
         display.refreshLabel(self.ui.label_fct_comp_7, "")
         try:
             cursor = self.data.cursor()
-            result = cursor.execute("select LRb.noSpec,LRb.dateRep,count(noPlace) as placeReserve from LesRepresentations_base LRb left outer join LesTickets LT on LRb.noSpec = LT.noSpec and LRb.dateRep = LT.dateRep GROUP BY LRb.noSpec,LRb.dateRep")
+            result = cursor.execute("select LRb.noSpec,LRb.dateRep,count(noPlace) as placeReserve "
+                                    "from LesRepresentations_base LRb left outer join LesTickets LT on LRb.noSpec = LT.noSpec and LRb.dateRep = LT.dateRep GROUP BY LRb.noSpec,LRb.dateRep")
             display.refreshGenericData(self.ui.table_fct_comp_7, result)
         except Exception as e:
             self.ui.table_fct_comp_7.setRowCount(0)

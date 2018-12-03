@@ -16,18 +16,33 @@ class AppFctComp6(QDialog):
         self.ui.setupUi(self)
         self.data = data
         self.refreshResult()
+        self.refreshResult2()
+
 
     # Fonction de mise à jour de l'affichage
     @pyqtSlot()
     def refreshResult(self):
-
-        display.refreshLabel(self.ui.label_fct_comp_P3_2, "")
+        display.refreshLabel(self.ui.label_fct_comp_6, "")
         try:
             cursor = self.data.cursor()
             result = cursor.execute(
-                "with X as (  select nomSpec, noSpec  from LesTickets natural join lesSpectacles) select nomSpec, dateRep, count(noSpec) as nbPlaceRes from X natural join LesSpectacles natural join LesRepresentations group by nomSpec, dateRep")
+                "SELECT nomSpec,noSpec,dateRep from LesRepresentations_base natural join LesSpectacles")
         except Exception as e:
-            self.ui.table_fct_comp_P3_2.setRowCount(0)
-            display.refreshLabel(self.ui.label_fct_comp_P3_2, "Impossible d'afficher les résultats : " + repr(e))
+            self.ui.table_fct_comp_6_1.setRowCount(0)
+            display.refreshLabel(self.ui.label_fct_comp_6, "Impossible d'afficher les résultats : " + repr(e))
         else:
-            display.refreshGenericData(self.ui.table_fct_comp_P3_2, result)
+            display.refreshGenericData(self.ui.table_fct_comp_6_1, result)
+
+    @pyqtSlot()
+    def refreshResult2(self):
+        display.refreshLabel(self.ui.label_fct_comp_6, "")
+        try:
+            cursor = self.data.cursor()
+            result = cursor.execute(
+                "select LRb.dateRep,count(noPlace) as Noplace from LesRepresentations_base LRb LEFT OUTER JOIN LesTickets LT on LRb.noSpec = LT.noSpec and LRb.dateRep = LT.dateRep"
+                " group by  LRb.dateRep")
+        except Exception as e:
+            self.ui.table_fct_comp_6_2.setRowCount(0)
+            display.refreshLabel(self.ui.label_fct_comp_6, "Impossible d'afficher les résultats : " + repr(e))
+        else:
+            display.refreshGenericData(self.ui.table_fct_comp_6_2, result)
