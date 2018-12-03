@@ -13,6 +13,8 @@ from actions.action_fct_comp_1 import AppFctComp1
 from actions.action_fct_comp_2 import AppFctComp2
 from actions.action_fct_comp_3 import AppFctComp3
 from actions.action_fct_comp_4 import AppFctComp4
+from actions.action_fct_comp_5 import AppFctComp5
+from actions.action_fct_comp_6 import AppFctComp6
 from actions.action_fct_comp_7 import AppFctComp7
 from actions.action_fct_comp_8 import AppFctComp8
 from actions.action_fct_comp_9 import AppFctComp9
@@ -36,6 +38,8 @@ class AppWindow(QMainWindow):
     fct_comp_2_dialog = None
     fct_comp_3_dialog = None
     fct_comp_4_dialog = None
+    fct_comp_5_dialog = None
+    fct_comp_6_dialog = None
     fct_comp_7_dialog = None
     fct_comp_8_dialog = None
     fct_comp_9_dialog = None
@@ -155,6 +159,18 @@ class AppWindow(QMainWindow):
         self.fct_comp_4_dialog.show()
         self.changedValue.connect(self.fct_comp_4_dialog.refreshResult)
 
+    # En cas de clic sur la fonction à compléter 5
+    def open_fct_comp_5(self):
+        self.fct_comp_5_dialog = AppFctComp5(self.data)
+        self.fct_comp_5_dialog.show()
+        self.changedValue.connect(self.fct_comp_5_dialog.refreshResult)
+
+    # En cas de clic sur la fonction à compléter 6
+    def open_fct_comp_6(self):
+        self.fct_comp_6_dialog = AppFctComp6(self.data)
+        self.fct_comp_6_dialog.show()
+        self.changedValue.connect(self.fct_comp_6_dialog.refreshResult)
+
     # En cas de clic sur la fonction 7
     def open_fct_comp_7(self):
         self.fct_comp_7_dialog = AppFctComp7(self.data)
@@ -200,6 +216,10 @@ class AppWindow(QMainWindow):
             self.fct_comp_3_dialog.close()
         if (self.fct_comp_4_dialog is not None):
             self.fct_comp_4_dialog.close()
+        if (self.fct_comp_5_dialog is not None):
+            self.fct_comp_5_dialog.close()
+        if (self.fct_comp_6_dialog is not None):
+            self.fct_comp_6_dialog.close()
         if (self.fct_comp_7_dialog is not None):
             self.fct_comp_7_dialog.close()
         if (self.fct_comp_8_dialog is not None):
