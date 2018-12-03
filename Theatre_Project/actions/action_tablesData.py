@@ -44,5 +44,7 @@ class AppTablesData(QDialog):
         self.refreshTable(self.ui.label_zones, self.ui.tableZones, "SELECT noZone, catZone, prixZone  FROM LesZones")
         self.refreshTable(self.ui.label_representations, self.ui.tableRepresentations, "SELECT dateRep,noSpec,nbPlacesDispo FROM LesRepresentations")
         self.refreshTable(self.ui.label_places, self.ui.tablePlaces, "SELECT noPlace, noRang, noZone FROM LesPlaces")
-        self.refreshTable(self.ui.label_dossiers, self.ui.tableDossiers, "SELECT noDos,montant FROM LesDossiers")
+        self.refreshTable(self.ui.label_dossiers, self.ui.tableDossiers, "SELECT noDos,login,montant FROM LesDossiers")
         self.refreshTable(self.ui.label_tickets, self.ui.tableTickets, "SELECT noSpec, dateRep, noPlace, noRang, dateEmTick, noDos FROM LesTickets")
+        self.refreshTable(self.ui.label_users,self.ui.tableUsers,"SELECT login,nom,prenom,mail,mdp FROM LesUsers")
+        self.refreshTable(self.ui.label_reservations, self.ui.tableReservations, "SELECT noSpec, dateRep, noPlace, noRang, dateReserve, login FROM LesReservations")

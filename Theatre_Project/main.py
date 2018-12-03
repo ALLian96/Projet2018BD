@@ -2,6 +2,7 @@
 import sys, sqlite3
 from utils import db
 from utils import display
+from utils import globalvar
 from PyQt5.QtWidgets import QMainWindow, QApplication
 from PyQt5.QtCore import pyqtSignal
 from gui.mainWindow import Ui_MainWindow
@@ -13,6 +14,8 @@ from actions.action_fct_comp_2 import AppFctComp2
 from actions.action_fct_comp_3 import AppFctComp3
 from actions.action_fct_comp_4 import AppFctComp4
 from actions.action_fct_comp_7 import AppFctComp7
+from actions.action_fct_comp_8 import AppFctComp8
+from actions.action_fct_comp_9 import AppFctComp9
 
 # Classe utilisée pour lancer la fenêtre principale de l'application et définir ses actions
 class AppWindow(QMainWindow):
@@ -34,6 +37,8 @@ class AppWindow(QMainWindow):
     fct_comp_3_dialog = None
     fct_comp_4_dialog = None
     fct_comp_7_dialog = None
+    fct_comp_8_dialog = None
+    fct_comp_9_dialog = None
 
     # Constructeur
     def __init__(self):
@@ -148,13 +153,27 @@ class AppWindow(QMainWindow):
     def open_fct_comp_4(self):
         self.fct_comp_4_dialog = AppFctComp4(self.data)
         self.fct_comp_4_dialog.show()
-        self.changedValue.connect(self.fct_comp_4_dialog.refreshCatList)
+        self.changedValue.connect(self.fct_comp_4_dialog.refreshResult)
 
     # En cas de clic sur la fonction 7
     def open_fct_comp_7(self):
-            self.fct_comp_7_dialog = AppFctComp7(self.data)
-            self.fct_comp_7_dialog.show()
-            self.changedValue.connect(self.fct_comp_7_dialog.refreshResult)
+        self.fct_comp_7_dialog = AppFctComp7(self.data)
+        self.fct_comp_7_dialog.show()
+        self.changedValue.connect(self.fct_comp_7_dialog.refreshResult)
+
+    # En cas de clic sur la fonction 8
+
+    def open_fct_comp_8(self):
+        self.fct_comp_8_dialog = AppFctComp8(self.data)
+        self.fct_comp_8_dialog.show()
+        self.changedValue.connect(self.fct_comp_8_dialog.refreshResult)
+
+    # En cas de clic sur la fonction 9
+
+    def open_fct_comp_9(self):
+        self.fct_comp_9_dialog = AppFctComp9(self.data)
+        self.fct_comp_9_dialog.show()
+        self.changedValue.connect(self.fct_comp_9_dialog.refreshResult)
 
     ####################################################################################################################
     # Fonctions liées aux évènements (signal/slot/event)
@@ -183,6 +202,10 @@ class AppWindow(QMainWindow):
             self.fct_comp_4_dialog.close()
         if (self.fct_comp_7_dialog is not None):
             self.fct_comp_7_dialog.close()
+        if (self.fct_comp_8_dialog is not None):
+            self.fct_comp_8_dialog.close()
+        if (self.fct_comp_9_dialog is not None):
+            self.fct_comp_9_dialog.close()
 
         # On ferme proprement la base de données
         self.data.close()

@@ -45,17 +45,42 @@ create table LesPlaces (
     constraint ck_pl_noP check (noPlace > 0),
     constraint ck_pl_noR check (noRang > 0)
 );
+ -- DDL pour la partie 4 extension
+create table LesUsers(
+    login varchar (50) not null,
+    nom varchar (50) not null,
+    prenom varchar (50) not null,
+    mail varchar (50) not null,
+    mdp varchar (50) not null,
+    constraint pk_User_log primary key (login)
+);
+
+create table LesReservations(
+    noSpec number (4,0),
+    dateRep date,
+    noPlace number (3,0),
+    noRang number (3,0),
+    dateReserve date,
+    login varchar (50) not null,
+    constraint pk_resr_place_rep unique (noSpec,dateRep,noPlace,noRang),
+    constraint fk_resr_numS_dateR foreign key (noSpec, dateRep) references LesRepresentations_base(noSpec, dateRep),
+    constraint fk_resr_noP_noR foreign key (noPlace, noRang) references LesPlaces (noPlace,noRang),
+    constraint fk_resr_login foreign key (login) references LesUsers (login),
+    constraint ck2_dates check (dateReserve < dateRep)
+);
 
 create table LesDossiers_base (
     noDos number (3,0),
-    constraint pk_dos_noD primary key (noDos)
+    login varchar (50) not null,
+    constraint pk_dos_noD primary key (noDos),
+    constraint fk_dos_login foreign key (login) references LesUsers(login)
 );
 
 -- TODO 1b : ajouter la définition des vues LesDossiers et LesRepresentations
 
-create view LesDossiers (noDos, montant) as
-    with X as (select noDos, prixZone from lesZones natural join LesPlaces natural join LesTickets)
-    select noDos, sum(prixZone) as montant from X group by noDos;
+create view LesDossiers (noDos,login, montant) as
+    with X as (select  noDos, prixZone,login from lesZones natural join LesPlaces natural join LesTickets natural join LesDossiers_base)
+    select noDos, login,sum(prixZone) as montant from X group by noDos;
 
 create view LesRepresentations (noSpec, dateRep, nbPlacesDispo) as
     with X as (
@@ -63,4 +88,6 @@ create view LesRepresentations (noSpec, dateRep, nbPlacesDispo) as
        )
     select LR.noSpec,LR.dateRep,placeTotal-count(noPlace) as placeDispo from LesRepresentations_base LR natural join X
               left outer join LesTickets LT on LR.noSpec = LT.noSpec and LR.dateRep = LT.dateRep
-              group by LR.noSpec,LR.dateRep
+              group by LR.noSpec,LR.dateRep;
+
+

@@ -1,6 +1,9 @@
 
 import PyQt5
 from PyQt5.QtWidgets import QTableWidget, QTableWidgetItem
+from utils import globalvar
+
+
 
 # Fonction permettant d'afficher un set de résultat sqlite dans un élément de type tableWidget
 # La fonction retourne le nombre de lignes qui ont été affichées
@@ -25,6 +28,7 @@ def refreshGenericCombo(combo, result):
     combo.clear()
     for row_num, row_data in enumerate(result):
         combo.addItem(str(row_data[0]))
+
 
 # Fonction permettant de mettre à jour un label, adaptée à tous les OS
 def refreshLabel(qlabel: PyQt5.QtWidgets.QLabel, text):

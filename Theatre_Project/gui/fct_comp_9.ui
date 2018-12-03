@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>fct_comp_9</class>
+ <widget class="QDialog" name="fct_comp_9">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>534</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Gestion de réservations</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_5">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Donner un login pour consulter les réservations correspondentes</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Login:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>OK</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="table_fct_comp_9">
+     <column>
+      <property name="text">
+       <string>Nom</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Prenom</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>noSpec</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>dateRep</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>noPlace</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>noRang</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_bas">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_11">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>Choisir noSpec</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>Choisir dateRep</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>Choisir noRang</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>Choisir noPlace</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <widget class="QComboBox" name="box_ns_a"/>
+       </item>
+       <item>
+        <widget class="QComboBox" name="box_dr_a"/>
+       </item>
+       <item>
+        <widget class="QComboBox" name="box_nr_a"/>
+       </item>
+       <item>
+        <widget class="QComboBox" name="box_np_a"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QPushButton" name="push_ajout">
+         <property name="text">
+          <string>Ajouter</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <item>
+          <widget class="QComboBox" name="box_ns_s"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <item>
+          <widget class="QComboBox" name="box_dr_s"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_9">
+         <item>
+          <widget class="QComboBox" name="box_nr_s"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QComboBox" name="box_np_s"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QPushButton" name="push_delete">
+         <property name="text">
+          <string>Suprrimer</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="push_fer">
+       <property name="text">
+        <string>Fermer</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>fct_comp_9</receiver>
+   <slot>refreshResult()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>497</x>
+     <y>29</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>120</x>
+     <y>17</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>box_ns_a</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>fct_comp_9</receiver>
+   <slot>refresh_dateRep()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>173</x>
+     <y>579</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>14</x>
+     <y>567</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>box_dr_a</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>fct_comp_9</receiver>
+   <slot>refresh_noRang()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>197</x>
+     <y>601</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1</x>
+     <y>594</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>box_nr_a</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>fct_comp_9</receiver>
+   <slot>refresh_noPlace()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>130</x>
+     <y>627</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>4</x>
+     <y>623</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>push_ajout</sender>
+   <signal>clicked()</signal>
+   <receiver>fct_comp_9</receiver>
+   <slot>add_reservation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>268</x>
+     <y>615</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>268</x>
+     <y>566</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>box_ns_s</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>fct_comp_9</receiver>
+   <slot>refresh_s_dateRep()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>348</x>
+     <y>581</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>493</x>
+     <y>573</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>box_dr_s</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>fct_comp_9</receiver>
+   <slot>refresh_s_noRang()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>378</x>
+     <y>602</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>462</x>
+     <y>593</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>box_nr_s</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>fct_comp_9</receiver>
+   <slot>refresh_s_noPlace()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>398</x>
+     <y>626</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>642</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>push_delete</sender>
+   <signal>clicked()</signal>
+   <receiver>fct_comp_9</receiver>
+   <slot>detele_reservation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>466</x>
+     <y>621</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>451</x>
+     <y>679</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>push_fer</sender>
+   <signal>clicked()</signal>
+   <receiver>fct_comp_9</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>264</x>
+     <y>682</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>323</x>
+     <y>689</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>refreshResult()</slot>
+  <slot>refresh_dateRep()</slot>
+  <slot>refresh_noSpec()</slot>
+  <slot>refresh_noRang()</slot>
+  <slot>refresh_noPlace()</slot>
+  <slot>add_reservation()</slot>
+  <slot>refresh_s_dateRep()</slot>
+  <slot>refresh_s_noRang()</slot>
+  <slot>refresh_s_noPlace()</slot>
+  <slot>detele_reservation()</slot>
+ </slots>
+</ui>
