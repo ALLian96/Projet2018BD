@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>556</width>
-    <height>734</height>
+    <width>500</width>
+    <height>528</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -252,7 +252,7 @@
    <slot>refreshResult()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>548</x>
+     <x>437</x>
      <y>29</y>
     </hint>
     <hint type="destinationlabel">
@@ -268,8 +268,8 @@
    <slot>refresh_dateRep()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>144</x>
-     <y>612</y>
+     <x>114</x>
+     <y>400</y>
     </hint>
     <hint type="destinationlabel">
      <x>14</x>
@@ -284,8 +284,8 @@
    <slot>refresh_noRang()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>144</x>
-     <y>641</y>
+     <x>114</x>
+     <y>429</y>
     </hint>
     <hint type="destinationlabel">
      <x>1</x>
@@ -300,8 +300,8 @@
    <slot>refresh_noPlace()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>134</x>
-     <y>670</y>
+     <x>106</x>
+     <y>458</y>
     </hint>
     <hint type="destinationlabel">
      <x>4</x>
@@ -316,8 +316,8 @@
    <slot>add_reservation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>242</x>
-     <y>654</y>
+     <x>204</x>
+     <y>442</y>
     </hint>
     <hint type="destinationlabel">
      <x>268</x>
@@ -332,8 +332,8 @@
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>258</x>
-     <y>724</y>
+     <x>222</x>
+     <y>515</y>
     </hint>
     <hint type="destinationlabel">
      <x>323</x>
@@ -348,8 +348,8 @@
    <slot>refresh_s_dateRep()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>350</x>
-     <y>612</y>
+     <x>306</x>
+     <y>404</y>
     </hint>
     <hint type="destinationlabel">
      <x>349</x>
@@ -364,8 +364,8 @@
    <slot>refresh_s_noRang()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>350</x>
-     <y>641</y>
+     <x>306</x>
+     <y>433</y>
     </hint>
     <hint type="destinationlabel">
      <x>349</x>
@@ -380,12 +380,12 @@
    <slot>refresh_s_noPlace()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>386</x>
-     <y>666</y>
+     <x>306</x>
+     <y>457</y>
     </hint>
     <hint type="destinationlabel">
-     <x>556</x>
-     <y>601</y>
+     <x>349</x>
+     <y>521</y>
     </hint>
    </hints>
   </connection>
@@ -396,12 +396,12 @@
    <slot>delete_reservation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>485</x>
-     <y>648</y>
+     <x>400</x>
+     <y>441</y>
     </hint>
     <hint type="destinationlabel">
-     <x>533</x>
-     <y>727</y>
+     <x>349</x>
+     <y>521</y>
     </hint>
    </hints>
   </connection>

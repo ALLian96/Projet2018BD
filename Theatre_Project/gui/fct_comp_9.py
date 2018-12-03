@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_fct_comp_9(object):
     def setupUi(self, fct_comp_9):
         fct_comp_9.setObjectName("fct_comp_9")
-        fct_comp_9.resize(556, 734)
+        fct_comp_9.resize(500, 528)
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(fct_comp_9)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.label = QtWidgets.QLabel(fct_comp_9)
