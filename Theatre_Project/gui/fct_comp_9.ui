@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>534</width>
-    <height>700</height>
+    <width>556</width>
+    <height>734</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Gestion de réservations</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_5">
+  <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
     <widget class="QLabel" name="label">
      <property name="text">
@@ -87,7 +87,7 @@
     </widget>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_11">
+    <layout class="QHBoxLayout" name="horizontalLayout_7">
      <item>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
@@ -138,6 +138,9 @@
      </item>
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_7">
+       <property name="spacing">
+        <number>10</number>
+       </property>
        <item>
         <widget class="QComboBox" name="box_ns_a"/>
        </item>
@@ -165,33 +168,26 @@
      </item>
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <property name="rightMargin">
+        <number>5</number>
+       </property>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_7">
-         <item>
-          <widget class="QComboBox" name="box_ns_s"/>
-         </item>
-        </layout>
+        <widget class="QComboBox" name="box_ns_s"/>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_8">
-         <item>
-          <widget class="QComboBox" name="box_dr_s"/>
-         </item>
-        </layout>
+        <widget class="QComboBox" name="box_dr_s"/>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_9">
-         <item>
-          <widget class="QComboBox" name="box_nr_s"/>
-         </item>
-        </layout>
+        <widget class="QComboBox" name="box_nr_s"/>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_3">
-         <item>
-          <widget class="QComboBox" name="box_np_s"/>
-         </item>
-        </layout>
+        <widget class="QComboBox" name="box_np_s"/>
        </item>
       </layout>
      </item>
@@ -256,7 +252,7 @@
    <slot>refreshResult()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>497</x>
+     <x>548</x>
      <y>29</y>
     </hint>
     <hint type="destinationlabel">
@@ -272,12 +268,12 @@
    <slot>refresh_dateRep()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>173</x>
-     <y>579</y>
+     <x>144</x>
+     <y>612</y>
     </hint>
     <hint type="destinationlabel">
      <x>14</x>
-     <y>567</y>
+     <y>270</y>
     </hint>
    </hints>
   </connection>
@@ -288,12 +284,12 @@
    <slot>refresh_noRang()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>197</x>
-     <y>601</y>
+     <x>144</x>
+     <y>641</y>
     </hint>
     <hint type="destinationlabel">
      <x>1</x>
-     <y>594</y>
+     <y>270</y>
     </hint>
    </hints>
   </connection>
@@ -304,12 +300,12 @@
    <slot>refresh_noPlace()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>130</x>
-     <y>627</y>
+     <x>134</x>
+     <y>670</y>
     </hint>
     <hint type="destinationlabel">
      <x>4</x>
-     <y>623</y>
+     <y>270</y>
     </hint>
    </hints>
   </connection>
@@ -320,76 +316,12 @@
    <slot>add_reservation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>268</x>
-     <y>615</y>
+     <x>242</x>
+     <y>654</y>
     </hint>
     <hint type="destinationlabel">
      <x>268</x>
-     <y>566</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>box_ns_s</sender>
-   <signal>currentTextChanged(QString)</signal>
-   <receiver>fct_comp_9</receiver>
-   <slot>refresh_s_dateRep()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>348</x>
-     <y>581</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>493</x>
-     <y>573</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>box_dr_s</sender>
-   <signal>currentTextChanged(QString)</signal>
-   <receiver>fct_comp_9</receiver>
-   <slot>refresh_s_noRang()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>378</x>
-     <y>602</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>462</x>
-     <y>593</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>box_nr_s</sender>
-   <signal>currentTextChanged(QString)</signal>
-   <receiver>fct_comp_9</receiver>
-   <slot>refresh_s_noPlace()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>398</x>
-     <y>626</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>501</x>
-     <y>642</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>push_delete</sender>
-   <signal>clicked()</signal>
-   <receiver>fct_comp_9</receiver>
-   <slot>detele_reservation()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>466</x>
-     <y>621</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>451</x>
-     <y>679</y>
+     <y>270</y>
     </hint>
    </hints>
   </connection>
@@ -400,12 +332,76 @@
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>264</x>
-     <y>682</y>
+     <x>258</x>
+     <y>724</y>
     </hint>
     <hint type="destinationlabel">
      <x>323</x>
-     <y>689</y>
+     <y>270</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>box_ns_s</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>fct_comp_9</receiver>
+   <slot>refresh_s_dateRep()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>350</x>
+     <y>612</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>349</x>
+     <y>270</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>box_dr_s</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>fct_comp_9</receiver>
+   <slot>refresh_s_noRang()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>350</x>
+     <y>641</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>349</x>
+     <y>270</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>box_nr_s</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>fct_comp_9</receiver>
+   <slot>refresh_s_noPlace()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>386</x>
+     <y>666</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>556</x>
+     <y>601</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>push_delete</sender>
+   <signal>clicked()</signal>
+   <receiver>fct_comp_9</receiver>
+   <slot>delete_reservation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>485</x>
+     <y>648</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>533</x>
+     <y>727</y>
     </hint>
    </hints>
   </connection>
@@ -420,6 +416,6 @@
   <slot>refresh_s_dateRep()</slot>
   <slot>refresh_s_noRang()</slot>
   <slot>refresh_s_noPlace()</slot>
-  <slot>detele_reservation()</slot>
+  <slot>delete_reservation()</slot>
  </slots>
 </ui>

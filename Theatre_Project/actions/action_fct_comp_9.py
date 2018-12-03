@@ -41,6 +41,8 @@ class AppFctComp9(QDialog):
                     display.refreshLabel(self.ui.label_bas, "Aucun résultat")
                 self.refresh_s_noSpec()  #Losqu'il y a des donnée,  on peut les supprimer et on met à jour le contenu de box_ns_s
 
+    # Partie add
+
     def refresh_noSpec(self):
         try:
             cursor = self.data.cursor()
@@ -80,11 +82,12 @@ class AppFctComp9(QDialog):
             cursor = self.data.cursor()
             result = cursor.execute(
                 "select noPlace from (select noPlace,noRang from LesPlaces except SELECT noPlace,noRang from LesPlaces natural join LesReservations order by noRang) where noRang = ?"
-                ,[self.ui.box_nr_a.currentText().strip()])
+                , [self.ui.box_nr_a.currentText().strip()])
         except Exception as e:
             self.ui.box_nr_a.clear()
         else:
             display.refreshGenericCombo(self.ui.box_np_a, result)
+
 
     def add_reservation(self):
         if not self.ui.lineEdit.text().strip():
@@ -93,7 +96,7 @@ class AppFctComp9(QDialog):
         else:
             try:
                 cursor = self.data.cursor()
-                result = cursor.execute("INSERT INTO LesReservations VALUES (?,?,?,?,?,?)",
+                cursor.execute("INSERT INTO LesReservations VALUES (?,?,?,?,?,?)",
                                     [self.ui.box_ns_a.currentText().strip(), self.ui.box_dr_a.currentText().strip(),
                                      self.ui.box_np_a.currentText().strip(), self.ui.box_nr_a.currentText().strip(),
                                      '06/01/2018 15:15:00', self.ui.lineEdit.text().strip()])
@@ -104,6 +107,9 @@ class AppFctComp9(QDialog):
                 display.refreshLabel(self.ui.label_bas, "Impossible d'ajouter la réservation : " + repr(e))
             else:
                 self.refreshResult()
+
+    # Partie suppression
+
 
     def refresh_s_noSpec(self):
         try:
@@ -158,11 +164,13 @@ class AppFctComp9(QDialog):
         else:
             try:
                 cursor = self.data.cursor()
-                result = cursor.execute("DELETE FROM LesReservations "
-                                        "where noSpec = ? and dateRep = ? and noPlace = ? and noRang = ? ",
-                                    [self.ui.box_ns_s.currentText().strip(), self.ui.box_dr_s.currentText().strip(),
-                                     self.ui.box_np_s.currentText().strip(), self.ui.box_nr_s.currentText().strip()])
-
+                cursor.execute("DELETE FROM LesReservations "
+                               "where noSpec = ? and dateRep = ? and noPlace = ? and noRang = ? and login = ? ",
+                                    [self.ui.box_ns_s.currentText().strip(),
+                                     self.ui.box_dr_s.currentText().strip(),
+                                     self.ui.box_np_s.currentText().strip(),
+                                     self.ui.box_nr_s.currentText().strip(),
+                                     self.ui.lineEdit.text().strip()])
             except Exception as e:
                 self.ui.table_fct_comp_9.setRowCount(0)
                 display.refreshLabel(self.ui.label_bas, "Impossible de supprimer la réservation : " + repr(e))
